@@ -1,0 +1,270 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 4fr;
+    font-family: 'Roboto', sans-serif;
+}
+
+nav{
+    color: white;
+    background-color: rgb(33, 42, 62);
+    grid-row: 1 / 3;
+}
+
+header{
+    background-color: rgb(241, 246, 249);
+}
+
+
+main{
+    background-color: rgb(155, 164, 181);
+}
+
+
+.logo{
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+h1{
+    font-weight: 500;
+    font-size: 2.5rem;
+}
+
+svg#dashboard{
+    width: 3.5rem;
+    height: 3.5rem;
+    fill: white;
+}
+
+div{
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    font-size: 1.3rem;
+}
+
+svg{
+    width: 2.2rem;
+    height: 2.2rem;
+}
+
+.tabs{
+    margin-top: 2rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.general > div, .confidential > div{
+    display: flex;
+    gap: 10px;
+    justify-content: start;
+    align-items: center;
+    transition: all ease 0.2s;
+}
+
+
+.general > div:hover, .confidential > div:hover{
+    transform: scale(1.04);
+}
+
+.general, .confidential{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.searchBar{
+    margin-top: 1rem;
+    margin-left: 2rem;
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+}
+
+.search, .notification{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+input{
+    height: 2.5vh;
+    width: 50vw;
+    border-radius: 10px;
+    border-width: 0;
+    background-color: rgb(155, 164, 181);
+    color: rgb(241, 246, 249);
+    font-size: 1.2rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.searchBar > div > svg{
+    height: 100%;
+}
+
+
+input:focus{
+    outline: none;
+}
+
+.notification{
+    margin-right: 2rem;
+}
+
+img#dog{
+    height: 70%;
+    transition: all ease 0.5s;
+}
+
+img#pfp{
+    transition: all ease 0.5s;
+}
+
+img#dog:hover, img#pfp:hover{
+    transform: scale(1.2);
+}
+
+.notification{
+    gap: 4rem;
+}
+
+.welcome{
+    display: flex;
+    gap: 1rem;
+    margin: 1.5rem;
+    margin-left: 2rem;
+    align-items: center;
+    margin-right: 2rem;
+}
+
+.txt p{
+    font-size: 1rem;
+}
+
+.txt h2{
+    font-size: 1.6rem;
+}
+
+.txt{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-weight: 600;
+}
+
+.buttons{
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    margin-left: 50rem;
+}
+
+.buttons > button{
+    padding: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 1rem;
+    background-color: rgb(33, 42, 62);
+    color: white;
+    border: none;
+    font-size: 1.2rem;
+}
+
+header{
+    display: grid;
+    grid-template-rows: 0.5fr 1fr;
+}
+
+main{
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2rem;
+}
+
+.projects{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 30%);
+    grid-template-rows: repeat(auto-fit, 30%);
+    gap: 1rem;
+    grid-row: 1 / 3;
+}
+
+.cards{
+    background-color: white;
+    border-radius: 10px;
+}
+
+.more{
+    grid-row: 1 / 3;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.announcements, .trending{
+    background-color: white;
+    border-radius: 10px;
+}
